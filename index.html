@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Princess Sara 💖</title>
+
+<style>
+body{
+    background: linear-gradient(135deg,#ffb6d9,#ffd6ec,#ffe6f5);
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:40px;
+    overflow:hidden;
+}
+
+h1{
+    font-size:40px;
+    color:#d6006e;
+}
+
+p{
+    font-size:22px;
+    color:#8b0045;
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+button{
+    padding:15px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    margin:10px;
+    transition:0.3s;
+}
+
+.yes{
+    background-color:#ff4da6;
+    color:white;
+}
+
+.no{
+    background-color:#444;
+    color:white;
+    position:absolute;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.page{
+    display:none;
+}
+.active{
+    display:block;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+<h1>Will you be my Valentine? please please? 😔</h1>
+<button class="yes" onclick="nextPage(2)">Yes 💕</button>
+<button class="no" id="no1">No 😢</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+<p>
+kanbghek bzzaf bzzaf asaratii zwena ntmna hadshi y3jbek wakha ra ki walo wlkin bghiit nqad lekk shi haja w sf w ohibokk bzzaf nti heya ahsan hajaa trat leyaaaa fhyati ma eamrni nlqa shi insana fhalk im so lucky to havee u muah muah muah muah 💋💋💋
+</p>
+<br>
+<button class="yes" onclick="nextPage(3)">Continue 💞</button>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+<h1>Shkon heya ahssan bent fl3alam? 😌</h1>
+<button class="yes" onclick="nextPage(4)">Sara 😍</button>
+<button class="no" id="no2">Chi bent akhra 😏</button>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+<h1>Ziad taybghekk bzzaf wla shwia? 😏</h1>
+<button class="yes" onclick="nextPage(5)">Bzzzaffff 💕</button>
+<button class="no" id="no3">Shwia bzzaf 🤨</button>
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="page">
+<h1>Good girl 😌💖</h1>
+<p>Tstahli wardaa 🌹 w kiss kbiraaaa 💋💋💋</p>
+
+<br><br>
+
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" 
+style="width:300px; border-radius:20px;">
+
+<h2 style="color:#d6006e;">Muah muah muahhhh 💋🐱💋</h2>
+</div>
+
+<script>
+
+function nextPage(pageNumber){
+    var pages=document.getElementsByClassName("page");
+    for(var i=0;i<pages.length;i++){
+        pages[i].classList.remove("active");
+    }
+    document.getElementById("page"+pageNumber).classList.add("active");
+}
+
+function moveButton(btn){
+    btn.style.top=Math.random()*80+"vh";
+    btn.style.left=Math.random()*80+"vw";
+}
+
+document.getElementById("no1").addEventListener("mouseover",function(){moveButton(this);});
+document.getElementById("no2").addEventListener("mouseover",function(){moveButton(this);});
+document.getElementById("no3").addEventListener("mouseover",function(){moveButton(this);});
+
+</script>
+
+</body>
+</html>
